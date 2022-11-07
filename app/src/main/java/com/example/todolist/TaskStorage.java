@@ -1,6 +1,5 @@
 package com.example.todolist;
 
-import static android.provider.Settings.System.getString;
 
 
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ public class TaskStorage {
         tasks= new ArrayList<>();
         for(int i=1;i<=150;i++){
             Task task=new Task();
-            task.setName("Pilne zadanie numer"+i );
+            task.setName("Pilne zadanie nr "+i);
             task.setDone(i%3==0);
             tasks.add(task);
             if(i%3 == 0){

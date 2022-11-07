@@ -28,13 +28,20 @@
                 android:layout_height="44dp"
                 android:textAlignment="viewStart"
                 android:textSize="24sp"
-                android:textColor="@color/dark_blue"/>
+                android:lines= "1"
+                android:ellipsize="end"
+                style="@style/TextFieldStyle"
+                />
+<!--                android:textColor="@color/dark_blue"-->
+
+
 
             <TextView
                 android:id="@+id/task_item_date"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/dark_green"/>
+                style="@style/TextFieldStyle"/>
+<!--                android:textColor="@color/dark_green"/>-->
         </LinearLayout>
 
         <ImageView
