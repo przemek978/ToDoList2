@@ -29,7 +29,6 @@
                 android:layout_height="44dp"
                 android:ellipsize="end"
                 android:lines="1"
-                android:maxWidth="287dp"
                 android:text="name"
                 android:textSize="24sp" />
             <!--                android:textColor="@color/dark_blue"-->

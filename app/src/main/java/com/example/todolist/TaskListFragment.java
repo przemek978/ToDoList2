@@ -3,6 +3,7 @@ package com.example.todolist;
 import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -186,6 +187,7 @@ public class TaskListFragment extends Fragment {
             checkBox.setChecked(tasks.get(position).isDone());
             checkBox.setOnCheckedChangeListener((buttonView, isChecked)->{
                     tasks.get(holder.getBindingAdapterPosition()).setDone(isChecked);
+                    holder.nameTextView.setMaxWidth(600);
                     if(checkBox.isChecked()){
                         holder.nameTextView.setPaintFlags(holder.nameTextView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     }
