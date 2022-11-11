@@ -61,6 +61,7 @@ public class TaskFragment extends Fragment {
             calendar.set(Calendar.MONTH,month);
             calendar.set(Calendar.DAY_OF_MONTH,day);
             setupDateFieldValue(calendar.getTime());
+            task.setDate(calendar.getTime());
         };
         datefield.setOnClickListener(view1->
                 new DatePickerDialog(getContext(),date,calendar.get(Calendar.YEAR),

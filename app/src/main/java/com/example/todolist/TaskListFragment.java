@@ -184,8 +184,15 @@ public class TaskListFragment extends Fragment {
             holder.bind(task);
             CheckBox checkBox=holder.getCheckBox();
             checkBox.setChecked(tasks.get(position).isDone());
-            checkBox.setOnCheckedChangeListener((buttonView, isChecked)->
-                    tasks.get(holder.getBindingAdapterPosition()).setDone(isChecked));
+            checkBox.setOnCheckedChangeListener((buttonView, isChecked)->{
+                    tasks.get(holder.getBindingAdapterPosition()).setDone(isChecked);
+                    if(checkBox.isChecked()){
+                        holder.nameTextView.setPaintFlags(holder.nameTextView.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                    }
+                    else{
+                        holder.nameTextView.setPaintFlags(holder.nameTextView.getPaintFlags() &~ Paint.STRIKE_THRU_TEXT_FLAG);
+                    }
+            });
         }
 
         @Override

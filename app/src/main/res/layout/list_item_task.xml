@@ -26,13 +26,13 @@
                 android:id="@+id/task_item_name"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
-                android:textAlignment="viewStart"
                 android:textSize="24sp"
                 android:lines= "1"
                 android:ellipsize="end"
                 style="@style/TextFieldStyle"
                 />
 <!--                android:textColor="@color/dark_blue"-->
+<!--            android:textAlignment="viewStart"-->
 
 
 
